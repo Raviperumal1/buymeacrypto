@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--+@#f#7i!xzq9et+g6)=lj&3z!2j)&4dwv(vhb@d59eu2a(0j!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['buymeacrypto.onrender.com']
+ALLOWED_HOSTS = ['https://buymeacrypto.onrender.com','127.0.0.1']
 
 LOGIN_URL='Creator:login'
 LOGIN_REDIRECT_URL='Crypto_App:index'
