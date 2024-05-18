@@ -1,19 +1,23 @@
-
 {% extends 'core/base.html' %}
 {% load static %}
+
 {% block title %}Edit{% endblock %}
 
 {% block content %}
 <div class="py-20 text-center space-y-12">
-    <h1 class="text-7xl text-slate-300 font-bold">Edit</h1>
+    <h1 class="text-4xl text-gray-800 font-bold">Edit</h1>
 </div>
-<div class="py-12 bg-slate-800">
-    <form action="." method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div>
-            <button class="w-full py-6 px-8 bg-sky-800 text-white font-bold rounded-xl">Submit</button>
-        </div>  
-    </form>
+
+<div class="py-12 bg-gray-100">
+    <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-md shadow-right-bottom">
+        <form action="." method="post" enctype="multipart/form-data" class="px-8 pt-6 pb-8">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="flex items-center justify-between mt-8">
+                <button class="w-2/5 py-3 bg-gray-800 text-white font-bold rounded-md hover:bg-gray-700 focus:outline-none focus:bg-gray-700" type="submit">Submit</button>
+                <a href="#" class="text-gray-600">Cancel</a>
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock %}
